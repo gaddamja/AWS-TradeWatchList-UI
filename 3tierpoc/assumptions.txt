@@ -1,0 +1,4 @@
+- Global Access
+- High Availability
+- Auto Scaling
+- Load Balanced
