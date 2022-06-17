@@ -1,1 +1,1 @@
-#Three Tier Architecuture for AWS
+# Three Tier Architecuture for AWS
