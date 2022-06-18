@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T14:34:11.596Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="btwDKwo2BrnBnm2fpfnV" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T14:36:08.337Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="B-oWMIeL3kAsXRYAuKKU" version="20.0.1" type="github">
   <diagram id="-GEG7NYa3MDwUE9U0rUo" name="Page-1">
     <mxGraphModel dx="1796" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -147,8 +147,8 @@
         <mxCell id="B0TIL4bSB5Exnn931L6U-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#919191;startArrow=none;startFill=0;strokeColor=#000000;" edge="1" parent="1" source="B0TIL4bSB5Exnn931L6U-77" target="B0TIL4bSB5Exnn931L6U-73">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="B0TIL4bSB5Exnn931L6U-77" value="Endpoints" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.endpoints;" vertex="1" parent="1">
-          <mxGeometry x="624.5" y="1417" width="60" height="60" as="geometry" />
+        <mxCell id="B0TIL4bSB5Exnn931L6U-77" value="&lt;font style=&quot;font-weight: normal;&quot; color=&quot;#919191&quot;&gt;VPC Endpoint for Dynamo db&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.endpoints;" vertex="1" parent="1">
+          <mxGeometry x="624.5" y="1430" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-81" value="Dynamo DB&lt;br&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;dashed=1;sketch=0;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="620" y="1720" width="80" height="20" as="geometry" />
