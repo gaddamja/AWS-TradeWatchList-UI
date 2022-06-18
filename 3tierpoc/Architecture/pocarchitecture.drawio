@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T08:53:48.626Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="kVlLXGk9zlfkhy3Gh-Wq" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T08:54:52.500Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="dPr5w2SMBGYp_fPHj8l7" version="20.0.1" type="github">
   <diagram id="-GEG7NYa3MDwUE9U0rUo" name="Page-1">
     <mxGraphModel dx="1796" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="B6OoX21ZwnaRHiZaLL_V-9" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
-          <mxGeometry x="-80" y="640" width="1320" height="1000" as="geometry" />
+          <mxGeometry x="-80" y="660" width="1320" height="1000" as="geometry" />
         </mxCell>
         <mxCell id="B6OoX21ZwnaRHiZaLL_V-13" value="Route 53&lt;br&gt;Alias Record" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-19.75" y="1115" width="90" height="30" as="geometry" />
@@ -86,7 +86,7 @@
           <mxGeometry x="760" y="799" width="160" height="200" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-1" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.cognito;fillColor=#AD688B;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="46.75" y="1180" width="76.5" height="93" as="geometry" />
+          <mxGeometry x="-3" y="1205" width="76.5" height="93" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.147;entryY=0.561;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
@@ -118,6 +118,9 @@
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-21" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#879196;" vertex="1" parent="1">
           <mxGeometry x="-230" y="1140" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="B0TIL4bSB5Exnn931L6U-25" value="Cognito User Pools" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#000000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-35.75" y="1311" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
