@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T11:55:43.840Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="ZFjAZ9UPWbcgfsM5_5rR" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T12:01:50.044Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="_Vxu8fvroBmryh1OWYcA" version="20.0.1" type="github">
   <diagram id="-GEG7NYa3MDwUE9U0rUo" name="Page-1">
-    <mxGraphModel dx="2036" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1796" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,6 +111,9 @@
         <mxCell id="B0TIL4bSB5Exnn931L6U-6" value="&lt;font color=&quot;#879196&quot;&gt;Internet&lt;br&gt;gateway&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet_gateway;" vertex="1" parent="1">
           <mxGeometry x="645" y="700" width="40" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="B0TIL4bSB5Exnn931L6U-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontColor=#000000;startArrow=none;startFill=0;strokeColor=#E3E3E3;" edge="1" parent="1" source="B0TIL4bSB5Exnn931L6U-10" target="B6OoX21ZwnaRHiZaLL_V-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-10" value="&lt;font color=&quot;#879196&quot;&gt;NAT gateway&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.nat_gateway;" vertex="1" parent="1">
           <mxGeometry x="509" y="799" width="31" height="31" as="geometry" />
         </mxCell>
@@ -178,6 +181,9 @@
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-70" value="ENI" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#000000;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="508" y="1511" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="B0TIL4bSB5Exnn931L6U-71" value="&lt;font color=&quot;#919191&quot;&gt;Private API Gateway&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="715" y="1129" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
