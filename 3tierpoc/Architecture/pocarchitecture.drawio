@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T08:54:52.500Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="dPr5w2SMBGYp_fPHj8l7" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T08:55:04.753Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="W04afbaZ12LZX06bThZw" version="20.0.1" type="github">
   <diagram id="-GEG7NYa3MDwUE9U0rUo" name="Page-1">
     <mxGraphModel dx="1796" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -120,7 +120,7 @@
           <mxGeometry x="-230" y="1140" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-25" value="Cognito User Pools" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontColor=#000000;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-35.75" y="1311" width="130" height="20" as="geometry" />
+          <mxGeometry x="-30.75" y="1311" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
