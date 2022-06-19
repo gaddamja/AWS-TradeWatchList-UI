@@ -1,17 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2022-06-19T05:15:42.013Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="P4MjwTh1U-KC6J4rC8IS" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-19T05:16:39.577Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="N0B4H3wvE_Eo1wTGbQwB" version="20.0.1" type="github">
   <diagram id="-GEG7NYa3MDwUE9U0rUo" name="Page-1">
     <mxGraphModel dx="1796" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="B6OoX21ZwnaRHiZaLL_V-9" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
-          <mxGeometry x="-40" y="520" width="1270" height="1190" as="geometry" />
+          <mxGeometry x="-116" y="540" width="1240" height="1180" as="geometry" />
         </mxCell>
         <mxCell id="B6OoX21ZwnaRHiZaLL_V-30" value="Region" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=1;shadow=0;" parent="1" vertex="1">
-          <mxGeometry x="155" y="565" width="1000" height="1116" as="geometry" />
+          <mxGeometry x="80" y="566" width="1000" height="1116" as="geometry" />
         </mxCell>
         <mxCell id="B6OoX21ZwnaRHiZaLL_V-31" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;shadow=0;" parent="1" vertex="1">
-          <mxGeometry x="280" y="723" width="820" height="767" as="geometry" />
+          <mxGeometry x="280" y="730" width="760" height="760" as="geometry" />
         </mxCell>
         <mxCell id="fDSZwFsicnBfdJ9t3ey4-1" value="&lt;font color=&quot;#879196&quot;&gt;Availability zone 2&lt;/font&gt;" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_availability_zone;strokeColor=#545B64;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#545B64;dashed=1;shadow=0;" parent="1" vertex="1">
           <mxGeometry x="760" y="760" width="240" height="340" as="geometry" />
@@ -144,19 +144,19 @@
           <mxGeometry x="700" y="1129" width="90" height="20" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-73" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;fontColor=#919191;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="620" y="1560" width="72" height="81" as="geometry" />
+          <mxGeometry x="620" y="1539" width="72" height="81" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#919191;startArrow=none;startFill=0;strokeColor=#000000;" edge="1" parent="1" source="B0TIL4bSB5Exnn931L6U-77">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="655" y="1490" as="sourcePoint" />
-            <mxPoint x="655" y="1550" as="targetPoint" />
+            <mxPoint x="655" y="1530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-77" value="&lt;font style=&quot;font-weight: normal;&quot; color=&quot;#919191&quot;&gt;VPC Endpoint for Dynamo db&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.endpoints;" vertex="1" parent="1">
           <mxGeometry x="625" y="1390" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="B0TIL4bSB5Exnn931L6U-81" value="Dynamo DB&lt;br&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;dashed=1;sketch=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="616" y="1661" width="80" height="20" as="geometry" />
+          <mxGeometry x="616" y="1639" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
