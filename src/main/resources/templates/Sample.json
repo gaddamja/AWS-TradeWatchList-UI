@@ -1,0 +1,425 @@
+{"Stock":[{
+	"Index": "Index",
+	"Symbol": "Symbol",
+	"Last": "Last Price",
+	"High": "High Price",
+	"Low": "Low Price",
+	"Change": "Change",
+	"ChangePercent": ".%",
+	"Time": "Date"
+}, 
+{
+	"Index": "Dow Jones Industrial Average",
+	"Symbol": "DJI",
+	"Last": "32,803.47",
+	"High": "32,814.61",
+	"Low": "32,489.62",
+	"Change": "76.65",
+	"ChangePercent": "0.23%",
+	"Time": "05/08"
+}, {
+	"Index": "S&P 500",
+	"Symbol": "US500",
+	"Last": "4,145.19",
+	"High": "4,151.58",
+	"Low": "4,107.31",
+	"Change": "-6.75",
+	"ChangePercent": "-0.16%",
+	"Time": "05/08"
+}, {
+	"Index": "NASDAQ Composite",
+	"Symbol": "IXIC",
+	"Last": "12,657.55",
+	"High": "12,720.44",
+	"Low": "12,525.77",
+	"Change": "-63.03",
+	"ChangePercent": "-0.50%",
+	"Time": "05/08"
+}, {
+	"Index": "US Small Cap 2000",
+	"Symbol": "US2000",
+	"Last": "1,921.82",
+	"High": "1,922.55",
+	"Low": "1,884.18",
+	"Change": "15.37",
+	"ChangePercent": "0.81%",
+	"Time": "05/08"
+}, {
+	"Index": "CBOE Volatility Index",
+	"Symbol": "VIX",
+	"Last": "21.15",
+	"High": "22.58",
+	"Low": "20.76",
+	"Change": "-0.29",
+	"ChangePercent": "-1.35%",
+	"Time": "05/08"
+}, {
+	"Index": "S&P/TSX Composite",
+	"Symbol": "GSPTSE",
+	"Last": "19,620.13",
+	"High": "19,620.13",
+	"Low": "19,443.34",
+	"Change": "43.09",
+	"ChangePercent": "0.22%",
+	"Time": "05/08"
+}, {
+	"Index": "Bovespa",
+	"Symbol": "BVSP",
+	"Last": "106,472.00",
+	"High": "107,176.00",
+	"Low": "105,518.00",
+	"Change": "580",
+	"ChangePercent": "0.55%",
+	"Time": "05/08"
+}, {
+	"Index": "S&P/BMV IPC",
+	"Symbol": "MXX",
+	"Last": "46,723.43",
+	"High": "47,023.76",
+	"Low": "46,283.75",
+	"Change": "-192.74",
+	"ChangePercent": "-0.41%",
+	"Time": "05/08"
+}, {
+	"Index": "DAX",
+	"Symbol": "DE30",
+	"Last": "13,573.93",
+	"High": "13,693.34",
+	"Low": "13,562.62",
+	"Change": "-88.75",
+	"ChangePercent": "-0.65%",
+	"Time": "05/08"
+}, {
+	"Index": "FTSE 100",
+	"Symbol": "UK100",
+	"Last": "7,439.74",
+	"High": "7,470.63",
+	"Low": "7,420.16",
+	"Change": "-8.32",
+	"ChangePercent": "-0.11%",
+	"Time": "05/08"
+}, {
+	"Index": "CAC 40",
+	"Symbol": "FCHI",
+	"Last": "6,472.35",
+	"High": "6,523.03",
+	"Low": "6,449.72",
+	"Change": "-41.04",
+	"ChangePercent": "-0.63%",
+	"Time": "05/08"
+}, {
+	"Index": "Euro Stoxx 50",
+	"Symbol": "STOXX50",
+	"Last": "3,725.39",
+	"High": "3,757.48",
+	"Low": "3,716.39",
+	"Change": "-29.21",
+	"ChangePercent": "-0.78%",
+	"Time": "05/08"
+}, {
+	"Index": "AEX",
+	"Symbol": "AEX",
+	"Last": "722.74",
+	"High": "732.19",
+	"Low": "720.49",
+	"Change": "-8.84",
+	"ChangePercent": "-1.21%",
+	"Time": "05/08"
+}, {
+	"Index": "IBEX 35",
+	"Symbol": "ES35",
+	"Last": "8,168.00",
+	"High": "8,198.00",
+	"Low": "8,120.50",
+	"Change": "6.90",
+	"ChangePercent": "0.08%",
+	"Time": "05/08"
+}, {
+	"Index": "FTSE MIB",
+	"Symbol": "IT40",
+	"Last": "22,586.88",
+	"High": "22,732.03",
+	"Low": "22,499.65",
+	"Change": "-58.96",
+	"ChangePercent": "-0.26%",
+	"Time": "05/08"
+}, {
+	"Index": "SMI",
+	"Symbol": "SWI20",
+	"Last": "11,123.07",
+	"High": "11,220.47",
+	"Low": "11,112.17",
+	"Change": "-79.59",
+	"ChangePercent": "-0.71%",
+	"Time": "05/08"
+}, {
+	"Index": "PSI",
+	"Symbol": "PSI20",
+	"Last": "6,076.90",
+	"High": "6,090.42",
+	"Low": "6,021.87",
+	"Change": "41.02",
+	"ChangePercent": "0.68%",
+	"Time": "05/08"
+}, {
+	"Index": "BEL 20",
+	"Symbol": "BFX",
+	"Last": "3,763.05",
+	"High": "3,791.69",
+	"Low": "3,750.36",
+	"Change": "-12.22",
+	"ChangePercent": "-0.32%",
+	"Time": "05/08"
+}, {
+	"Index": "ATX",
+	"Symbol": "ATX",
+	"Last": "3,024.30",
+	"High": "3,038.72",
+	"Low": "3,013.72",
+	"Change": "-9.60",
+	"ChangePercent": "-0.32%",
+	"Time": "05/08"
+}, {
+	"Index": "OMX Stockholm 30",
+	"Symbol": "OMXS30",
+	"Last": "1,998.57",
+	"High": "2,029.80",
+	"Low": "1,998.49",
+	"Change": "-22.26",
+	"ChangePercent": "-1.10%",
+	"Time": "05/08"
+}, {
+	"Index": "OMX Copenhagen 25",
+	"Symbol": "OMXC25CAP",
+	"Last": "1,732.27",
+	"High": "1,776.36",
+	"Low": "1,731.09",
+	"Change": "-36.87",
+	"ChangePercent": "-2.08%",
+	"Time": "05/08"
+}, {
+	"Index": "MOEX Russia",
+	"Symbol": "IMOEX",
+	"Last": "2,054.29",
+	"High": "2,124.60",
+	"Low": "2,052.08",
+	"Change": "-62.29",
+	"ChangePercent": "-2.94%",
+	"Time": "05/08"
+}, {
+	"Index": "RTSI",
+	"Symbol": "IRTS",
+	"Last": "1,072.31",
+	"High": "1,112.71",
+	"Low": "1,069.35",
+	"Change": "-32.46",
+	"ChangePercent": "-2.94%",
+	"Time": "05/08"
+}, {
+	"Index": "WIG20",
+	"Symbol": "WIG20",
+	"Last": "1,652.14",
+	"High": "1,696.43",
+	"Low": "1,643.02",
+	"Change": "-22.23",
+	"ChangePercent": "-1.33%",
+	"Time": "05/08"
+}, {
+	"Index": "Budapest SE",
+	"Symbol": "BUX",
+	"Last": "43,468.28",
+	"High": "43,728.02",
+	"Low": "43,117.18",
+	"Change": "135.45",
+	"ChangePercent": "0.31%",
+	"Time": "05/08"
+}, {
+	"Index": "BIST 100",
+	"Symbol": "XU100",
+	"Last": "2,750.49",
+	"High": "2,762.95",
+	"Low": "2,707.18",
+	"Change": "26.82",
+	"ChangePercent": "0.98%",
+	"Time": "05/08"
+}, {
+	"Index": "TA 35",
+	"Symbol": "TA35",
+	"Last": "1,956.96",
+	"High": "1,960.01",
+	"Low": "1,947.67",
+	"Change": "11.01",
+	"ChangePercent": "0.57%",
+	"Time": "04/08"
+}, {
+	"Index": "Tadawul All Share",
+	"Symbol": "TASI",
+	"Last": "12,216.84",
+	"High": "12,315.97",
+	"Low": "12,201.49",
+	"Change": "-74.70",
+	"ChangePercent": "-0.61%",
+	"Time": "08:19:00"
+}, {
+	"Index": "Nikkei 225",
+	"Symbol": "JP225",
+	"Last": "28,175.87",
+	"High": "28,190.04",
+	"Low": "27,910.22",
+	"Change": "243.67",
+	"ChangePercent": "0.87%",
+	"Time": "05/08"
+}, {
+	"Index": "S&P/ASX 200",
+	"Symbol": "AXJO",
+	"Last": "7,015.60",
+	"High": "7,016.60",
+	"Low": "6,969.60",
+	"Change": "40.70",
+	"ChangePercent": "0.58%",
+	"Time": "05/08"
+}, {
+	"Index": "Dow Jones New Zealand",
+	"Symbol": "NZDOW",
+	"Last": "320.01",
+	"High": "322.01",
+	"Low": "319.70",
+	"Change": "-1.22",
+	"ChangePercent": "-0.38%",
+	"Time": "05/08"
+}, {
+	"Index": "Shanghai Composite",
+	"Symbol": "SSEC",
+	"Last": "3,227.03",
+	"High": "3,228.89",
+	"Low": "3,184.45",
+	"Change": "37.99",
+	"ChangePercent": "1.19%",
+	"Time": "05/08"
+}, {
+	"Index": "SZSE Component",
+	"Symbol": "SZI",
+	"Last": "12,269.21",
+	"High": "12,275.96",
+	"Low": "12,051.40",
+	"Change": "203.99",
+	"ChangePercent": "1.69%",
+	"Time": "05/08"
+}, {
+	"Index": "FTSE China A50",
+	"Symbol": "FTXIN9",
+	"Last": "13,632.03",
+	"High": "13,649.82",
+	"Low": "13,456.92",
+	"Change": "122.00",
+	"ChangePercent": "0.90%",
+	"Time": "05/08"
+}, {
+	"Index": "Dow Jones Shanghai",
+	"Symbol": "DJSH",
+	"Last": "469.74",
+	"High": "469.99",
+	"Low": "463.11",
+	"Change": "6.53",
+	"ChangePercent": "1.41%",
+	"Time": "05/08"
+}, {
+	"Index": "Hang Seng",
+	"Symbol": "HK50",
+	"Last": "20,201.94",
+	"High": "20,283.59",
+	"Low": "20,096.73",
+	"Change": "27.90",
+	"ChangePercent": "0.14%",
+	"Time": "05/08"
+}, {
+	"Index": "Taiwan Weighted",
+	"Symbol": "TWII",
+	"Last": "15,036.04",
+	"High": "15,041.41",
+	"Low": "14,802.34",
+	"Change": "333.84",
+	"ChangePercent": "2.27%",
+	"Time": "05/08"
+}, {
+	"Index": "SET Index",
+	"Symbol": "SETI",
+	"Last": "1,601.09",
+	"High": "1,603.86",
+	"Low": "1,595.89",
+	"Change": "2.34",
+	"ChangePercent": "0.15%",
+	"Time": "05/08"
+}, {
+	"Index": "KOSPI",
+	"Symbol": "KS11",
+	"Last": "2,490.80",
+	"High": "2,497.58",
+	"Low": "2,480.05",
+	"Change": "17.69",
+	"ChangePercent": "0.72%",
+	"Time": "05/08"
+}, {
+	"Index": "Jakarta Stock Exchange Composite Index",
+	"Symbol": "JKSE",
+	"Last": "7,084.65",
+	"High": "7,090.77",
+	"Low": "7,045.98",
+	"Change": "27.31",
+	"ChangePercent": "0.39%",
+	"Time": "05/08"
+}, {
+	"Index": "Nifty 50",
+	"Symbol": "NSEI",
+	"Last": "17,397.50",
+	"High": "17,474.40",
+	"Low": "17,348.75",
+	"Change": "15.50",
+	"ChangePercent": "0.09%",
+	"Time": "05/08"
+}, {
+	"Index": "BSE Sensex 30",
+	"Symbol": "BSESN",
+	"Last": "58,387.93",
+	"High": "58,649.19",
+	"Low": "58,244.86",
+	"Change": "89.13",
+	"ChangePercent": "0.15%",
+	"Time": "05/08"
+}, {
+	"Index": "PSEi Composite",
+	"Symbol": "PSI",
+	"Last": "6,405.50",
+	"High": "6,519.80",
+	"Low": "6,405.50",
+	"Change": "0.00",
+	"ChangePercent": "0.00%",
+	"Time": "05/08"
+}, {
+	"Index": "Karachi 100",
+	"Symbol": "KSE",
+	"Last": "42,096.24",
+	"High": "42,168.08",
+	"Low": "41,425.37",
+	"Change": "670.87",
+	"ChangePercent": "1.62%",
+	"Time": "05/08"
+}, {
+	"Index": "VN 30",
+	"Symbol": "VNI30",
+	"Last": "1,272.06",
+	"High": "1,276.19",
+	"Low": "1,265.93",
+	"Change": "-5.67",
+	"ChangePercent": "-0.44%",
+	"Time": "05/08"
+}, {
+	"Index": "CSE All-Share",
+	"Symbol": "CSE",
+	"Last": "8,333.37",
+	"High": "8,363.85",
+	"Low": "8,228.19",
+	"Change": "104.23",
+	"ChangePercent": "1.27%",
+	"Time": "05/08"
+}]}
