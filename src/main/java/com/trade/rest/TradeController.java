@@ -83,7 +83,6 @@ public class TradeController {
         String fromSymbol = metadata.getAsJsonObject().get("2. From Symbol").toString();
         String toSymbol = metadata.getAsJsonObject().get("3. To Symbol").toString();
         JsonElement timeSeriesData = jsonObject.get("Time Series FX (60min)");
-        System.out.println("jsonElement :"+timeSeriesData);
         Set<Map.Entry<String, JsonElement>> entrySet = timeSeriesData.getAsJsonObject().entrySet();
         entrySet.parallelStream().forEach(entry -> {
             Currency curr = new Currency();
@@ -93,7 +92,6 @@ public class TradeController {
             curr.setHigh(entry.getValue().getAsJsonObject().get("2. high").getAsString());
             curr.setLow(entry.getValue().getAsJsonObject().get("3. low").getAsString());
             curr.setLast(entry.getValue().getAsJsonObject().get("4. close").getAsString());
-            System.out.println("curr :"+curr);
             currencies.add(curr);
         });
         Root root = new Root();
