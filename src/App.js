@@ -24,9 +24,9 @@ function App() {
   {field: 'Last'},
   {field: 'High'},
   {field: 'Low'},
+  {field: 'Time'},
   {field: 'Change'},
-  {field: 'ChangePercent'},
-  {field: 'Time'}
+  {field: 'ChangePercent'}
 ]);
 
 // DefaultColDef sets props common to all Columns
@@ -53,11 +53,6 @@ const cellClickedListener = useCallback( event => {
     
   };
 
-  
-
-
-
-
  /*const filteredstocks = stocks.filter(stock =>
     stock.Symbol.toLowerCase().includes(search.toLowerCase())
   );*/
@@ -74,7 +69,6 @@ const cellClickedListener = useCallback( event => {
       )
       .then(res => {
         setStocks(res.data.Currency);
-        console.log(res.data.Currency);
         console.log(stocks.length);
       })
       .catch(error => console.log(error));
