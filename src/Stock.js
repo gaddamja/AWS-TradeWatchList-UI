@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Plot from 'react-plotly.js';
 
 class Stock extends React.Component {
@@ -77,4 +77,4 @@ class Stock extends React.Component {
   }
 }
 
-export default Stock;
+export default Stock; */

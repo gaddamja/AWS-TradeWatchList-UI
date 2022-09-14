@@ -1,9 +1,8 @@
 import logo from './logo.svg';
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
 import axios from 'axios';
-import Stock from './Stock';
+//import Stock from './Stock';
 import './App.css';
-import StocksDisplay from './Stocks';
 import Stocks from './Stocks';
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
