@@ -1,43 +1,109 @@
 import logo from './logo.svg';
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
 import axios from 'axios';
-//import Stock from './Stock';
+import Trade from './Trade';
 import './App.css';
-import Stocks from './Stocks';
+//import Stocks from './Stocks';
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 
+//import { ModuleRegistry } from 'ag-grid-community/core';
+//import { ClientSideRowModelModule } from 'ag-grid-community/client-side-row-model';
+
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Currency from './Currency';
+
+// Register the required feature modules with the Grid
+//ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 function App() {
-  const gridRef = useRef(); // Optional - for accessing Grid's API
+  //const gridRef = useRef(); // Optional - for accessing Grid's API
   const [stocks, setStocks] = useState([]);
+  const [currencies, setCurrencies] = useState([]);
+  const [lastPrice, setLastPrice] = useState([]);
+  const [priceDate, setPriceDate] = useState([]);
+  const [index, setIndex] = useState([]);
+  const [currLastPrice, setCurrLastPrice] = useState([]);
+  const [currPriceDate, setCurrPriceDate] = useState([]);
+  const [currIndex, setCurrIndex] = useState([]);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [currencyArr, getCurrencyArr] = useState('');
   const [fromSymbol, setFromSymbol] = useState('');
   const [toSymbol, setToSymbol] = useState('');
+  let lastPrices = [];
+  let priceDates = [];
+  let indexes = [];
+  let currlastPrices = [];
+  let currpriceDates = [];
+  let currindexes = [];
+  //const [gridApi, setGridApi] =useState(null);
 
-  // Each Column Definition results in one Column.
- const [columnDefs, setColumnDefs] = useState([
-  {field: 'FromSymbol', filter: true},
-  {field: 'ToSymbol', filter: true},
-  {field: 'Last'},
-  {field: 'High'},
-  {field: 'Low'},
-  {field: 'Time'},
-  {field: 'Change'},
-  {field: 'ChangePercent'}
-]);
-
-// DefaultColDef sets props common to all Columns
-const defaultColDef = useMemo( ()=> ({
-    sortable: true
-  }));
-
-// Example of consuming Grid Event
-const cellClickedListener = useCallback( event => {
-  console.log('cellClicked', event);
-}, []);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8083/tradeRequest/allStocks`
+        );
+        console.log(response.data)
+        setStocks(response.data);
+        indexes = [];
+        lastPrices = [];
+        priceDates = [];
+        response.data.forEach(element => {
+          indexes.push(element.Index+":"+element.Time.split(/\s+/)[0]+"|"+element.LastPrice);
+          lastPrices.push(element.LastPrice);
+          priceDates.push(element.Time);
+        });
+        setIndex(indexes);
+        setLastPrice(lastPrices);
+        setPriceDate(priceDates);
+        console.log(response.data)
+        console.log(indexes);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setStocks(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
+  }, []);
   
+  
+  useEffect(() => {
+    const getCurrencyData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8083/tradeRequest/currencies`
+        );
+        console.log("currencies :: ",response.data)
+        setCurrencies(response.data);
+        currlastPrices = [];
+        currindexes = [];
+        currpriceDates = [];
+        response.data.forEach(element => {
+          currindexes.push(element.Index+":"+element.PriceDate.split(/\s+/)[0]+"|"+element.Last);
+          currlastPrices.push(element.Last);
+          currpriceDates.push(element.PriceDate);
+        });
+        setCurrIndex(currindexes);
+        setCurrLastPrice(currlastPrices);
+        setCurrPriceDate(currpriceDates);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setCurrencies(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getCurrencyData();
+  }, []);
 
 
   const changeFromSymbol = e => {
@@ -56,6 +122,8 @@ const cellClickedListener = useCallback( event => {
     stock.Symbol.toLowerCase().includes(search.toLowerCase())
   );*/
 
+ 
+  
 
   const handleClick = event => {
     event.preventDefault();
@@ -67,73 +135,21 @@ const cellClickedListener = useCallback( event => {
         'http://localhost:8083/tradeRequest/'+fromSymbol+'/'+toSymbol
       )
       .then(res => {
-        setStocks(res.data.Currency);
-        console.log(stocks.length);
+        getCurrencyArr(res.data.Currency.get(0));
+        console.log(currencyArr.length);
       })
       .catch(error => console.log(error));
   };
 
-  return (
-    <div className='stocks-app'>
-      <div className='stocks-search'>
-
-      <h1 className='stocks-text'>World Market Watchlist</h1>
-
-       Input Currency
-        <form>
-          <input
-            className='stocks-input'
-            type='text'
-            id='fromSymbol'
-            name='fromSymbol'
-            onChange={changeFromSymbol}
-            value={fromSymbol}
-            placeholder='From Currency'
-          />
-          &nbsp;&nbsp;
-          <input
-            className='stocks-input'
-            type='text'
-            id='toSymbol'
-            name='toSymbol'
-            onChange={changeToSymbol}
-            value={toSymbol}
-            placeholder='To Currency'
-          />
-          &nbsp;&nbsp;
-          <button onClick={handleClick}>
-            Go
-          </button>
-        </form>
-      </div>
-      <div>
-
-
-
-{/* On div wrapping Grid a) specify theme CSS Class Class and b) sets Grid size */}
-<div className="ag-theme-alpine" style={{width: 1300, height: 500}}>
-
-  <AgGridReact
-      ref={gridRef} // Ref for accessing Grid's API
-
-      rowData={stocks} // Row Data for Rows
-
-      columnDefs={columnDefs} // Column Defs for Columns
-      defaultColDef={defaultColDef} // Default Column Properties
-
-      animateRows={true} // Optional - set to 'true' to have rows animate when sorted
-      rowSelection='multiple' // Options - allows click selection of rows
-
-      onCellClicked={cellClickedListener} // Optional - registering for Grid Event
-      //onGridReady={onGridReady}
-      />
-</div>
-</div>
-      
-           
-          </div>
+   
+return (
+ <div>
+  <Trade indexes={index} lastPrices={lastPrice} priceDates={priceDate}></Trade>
+  <Currency indexes={currIndex} lastPrices={currLastPrice} priceDates={currPriceDate}></Currency>
+  </div>
+)
     
-  );
+ 
 }
 
 export default App;
