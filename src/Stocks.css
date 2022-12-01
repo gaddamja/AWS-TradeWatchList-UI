@@ -75,3 +75,15 @@
 .green {
   color: #11d811;
 }
+
+.cell-red {
+  text-align: center;
+  font-weight: bold;
+  color: #f00606;
+}
+
+.cell-green {
+  text-align: center;
+  font-weight: bold;
+  color: #11d811;
+}

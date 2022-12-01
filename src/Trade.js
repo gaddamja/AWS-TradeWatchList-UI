@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
 import axios from 'axios';
 
-import './App.css';
+import './Stocks.css';
 
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
@@ -28,6 +28,10 @@ export default function Trade({indexes, lastPrices, priceDates}) {
     };
 
 
+    const cellClassRules = {
+      "cell-red": params => params.value < 0,
+      "cell-green": params => params.value >= 0
+    };
    
   
   // Each Column Definition results in one Column.
@@ -46,16 +50,16 @@ export default function Trade({indexes, lastPrices, priceDates}) {
   {headerName: 'Spread (Last Price)', field: 'SpreadLastPrice'},
   {headerName: '%Var. (Since Inception)', field: 'PercentVarSinceInception'},
   {headerName: 'Weeks on Watchlist', field: 'WeeksonWatchlist', editable: true},
-  {headerName: 'Week 1', field: 'Week1'},
-  {headerName: 'Week 2', field: 'Week2'},
-  {headerName: 'Week 3', field: 'Week3'},
-  {headerName: 'Week 4', field: 'Week4'},
-  {headerName: 'Week 5', field: 'Week5'},
-  {headerName: 'Week 6', field: 'Week6'},
-  {headerName: 'Week 7', field: 'Week7'},
-  {headerName: 'Week 8', field: 'Week8'},
-  {headerName: 'Week 9', field: 'Week9'},
-  {headerName: 'Week 10', field: 'Week10'}
+  {headerName: 'Week 1', field: 'Week1',cellClassRules: cellClassRules},
+  {headerName: 'Week 2', field: 'Week2',cellClassRules: cellClassRules},
+  {headerName: 'Week 3', field: 'Week3',cellClassRules: cellClassRules},
+  {headerName: 'Week 4', field: 'Week4',cellClassRules: cellClassRules},
+  {headerName: 'Week 5', field: 'Week5',cellClassRules: cellClassRules},
+  {headerName: 'Week 6', field: 'Week6',cellClassRules: cellClassRules},
+  {headerName: 'Week 7', field: 'Week7',cellClassRules: cellClassRules},
+  {headerName: 'Week 8', field: 'Week8',cellClassRules: cellClassRules},
+  {headerName: 'Week 9', field: 'Week9',cellClassRules: cellClassRules},
+  {headerName: 'Week 10', field: 'Week10',cellClassRules: cellClassRules}
   ]}
 ]);
 
@@ -144,6 +148,8 @@ const onCellValueChanged = useCallback((event) => {
         const strshortEntryDescending = [...shortentryArr].sort((a, b) =>
         a.split(":")[0] >  b.split(":")[0]  ? -1 : 1,
       );
+      //console.log(strlongEntryDescending);
+      //console.log(strshortEntryDescending);
       let count = 0;
       while(count < rowNode.data.WeeksonWatchlist) {
         let spread = parseFloat(strlongEntryDescending[count].split(":")[1]/strshortEntryDescending[count].split(":")[1]).toFixed(2);

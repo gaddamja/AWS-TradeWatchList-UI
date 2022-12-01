@@ -14,8 +14,9 @@ import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function Currency({indexes, lastPrices, priceDates}) {
+export default function Options({indexes, lastPrices, priceDates}) {
 
+  
   
     const gridRef = useRef(); // Optional - for accessing Grid's API
 
@@ -27,9 +28,11 @@ export default function Currency({indexes, lastPrices, priceDates}) {
     };
 
 
+   
+  
   // Each Column Definition results in one Column.
  const [columnDefs, setColumnDefs] = useState([
-  {headerName: 'FX Rates',
+  {headerName: 'Options',
   children: [
   {headerName: 'Long Index',field: 'LongIndex', editable: true,filter: true},
   {headerName: 'Short Index', field: 'ShortIndex', editable: true,filter: true},
@@ -57,7 +60,7 @@ export default function Currency({indexes, lastPrices, priceDates}) {
 ]);
 
 const [rowData, setRowData] = useState([
-  { LongIndex: '', ShortIndex: '', EntryDate: '', LongEntryPrice: '', ShortEntryPrice: '', SpreadEntryPrice: '', PositionDate: '', LongLastPrice: '', ShortLastPrice: '', SpreadLastPrice: '', PercentVarSinceInception: '', WeeksonWatchlist: '', Week1: '', Week2: '', Week3: '', Week4: '', Week5: '', Week6: '', Week7: '', Week8: '', Week9: '', Week10: '' },
+  { LongIndex: '', ShortIndex: '', EntryDate: '', LongEntryPrice: '', ShortEntryPrice: '', SpreadEntryPrice: '', PositionDate: '', LongLastPrice: '', ShortLastPrice: '', SpreadLastPrice: '', PercentVarSinceInception: '', WeeksonWatchlist: '', Week1: '', Week2: '', Week3: '', Week4: '', Week5: '', Week6: '', Week7: '', Week8: '', Week9: '', Week10: ''},
   
 ]);
 // DefaultColDef sets props common to all Columns
@@ -83,7 +86,7 @@ const onCellValueChanged = useCallback((event) => {
   const onAddRow = () => {
     
     gridApi.updateRowData({
-      add: [{ LongIndex: '', ShortIndex: '', EntryDate: '', LongEntryPrice: '', ShortEntryPrice: '', SpreadEntryPrice: '', PositionDate: '', LongLastPrice: '', ShortLastPrice: '', SpreadLastPrice: '', PercentVarSinceInception: '', WeeksonWatchlist: '' , Week1: '', Week2: '', Week3: '', Week4: '', Week5: '', Week6: '', Week7: '', Week8: '', Week9: '', Week10: '' }]
+      add: [{ LongIndex: '', ShortIndex: '', EntryDate: '', LongEntryPrice: '', ShortEntryPrice: '', SpreadEntryPrice: '', PositionDate: '', LongLastPrice: '', ShortLastPrice: '', SpreadLastPrice: '', PercentVarSinceInception: '', WeeksonWatchlist: '', Week1: '', Week2: '', Week3: '', Week4: '', Week5: '', Week6: '', Week7: '', Week8: '', Week9: '', Week10: ''}]
          });
   }
 
@@ -93,6 +96,7 @@ const onCellValueChanged = useCallback((event) => {
       let longentryArr = [];
       let shortentryArr = [];
       indexes.map(a=>{
+       
         if(a.split("|")[0] === (rowNode.data.LongIndex.trim()+":"+rowNode.data.EntryDate)) {
           console.log("matched");
           rowNode.setDataValue('LongEntryPrice',a.split('|')[1]);
@@ -104,13 +108,13 @@ const onCellValueChanged = useCallback((event) => {
         if(a.split("|")[0] === (rowNode.data.ShortIndex.trim()+":"+rowNode.data.EntryDate)) {
           console.log("matched");
           rowNode.setDataValue('ShortEntryPrice',a.split('|')[1]);
-          
         }
+ 
         if(a.split("|")[0].split(":")[0] === rowNode.data.ShortIndex.trim()) {
           shortentryArr.push(a.split("|")[0].split(":")[1]+":"+a.split('|')[1]);
         }
 
-        let spreadEntry = parseFloat(parseFloat(rowNode.data.LongEntryPrice)/parseFloat(rowNode.data.ShortEntryPrice)).toFixed(4);
+        let spreadEntry = parseFloat(parseFloat(rowNode.data.LongEntryPrice)/parseFloat(rowNode.data.ShortEntryPrice)).toFixed(2)
         rowNode.setDataValue('SpreadEntryPrice',spreadEntry);
 
         if(a.split("|")[0] === (rowNode.data.LongIndex.trim()+":"+rowNode.data.PositionDate)) {
@@ -124,13 +128,14 @@ const onCellValueChanged = useCallback((event) => {
           
         }
  
-        let spreadLast = parseFloat(parseFloat(rowNode.data.LongLastPrice)/parseFloat(rowNode.data.ShortLastPrice)).toFixed(4);
+        let spreadLast = parseFloat(parseFloat(rowNode.data.LongLastPrice)/parseFloat(rowNode.data.ShortLastPrice)).toFixed(2)
         rowNode.setDataValue('SpreadLastPrice',spreadLast);
 
         let variance = parseFloat(((spreadLast - spreadEntry)/spreadEntry)*100).toFixed(2)+'%';
         rowNode.setDataValue('PercentVarSinceInception',variance);
 
       })
+   
       if(rowNode.data.WeeksonWatchlist !== '' ) {
      
         const strlongEntryDescending = [...longentryArr].sort((a, b) =>
@@ -139,8 +144,8 @@ const onCellValueChanged = useCallback((event) => {
         const strshortEntryDescending = [...shortentryArr].sort((a, b) =>
         a.split(":")[0] >  b.split(":")[0]  ? -1 : 1,
       );
-      console.log(strlongEntryDescending);
-      console.log(strshortEntryDescending);
+      //console.log(strlongEntryDescending);
+      //console.log(strshortEntryDescending);
       let count = 0;
       while(count < rowNode.data.WeeksonWatchlist) {
         let spread = parseFloat(strlongEntryDescending[count].split(":")[1]/strshortEntryDescending[count].split(":")[1]).toFixed(2);
@@ -158,6 +163,7 @@ const onCellValueChanged = useCallback((event) => {
   return (
     <div className='stocks-app'>
     
+      
     <div>
       <button className="btn btn-primary mb-3" onClick={onAddRow}>Add Row</button>&nbsp;&nbsp;
       <button className="btn btn-primary mb-3" onClick={loadData}>Load data</button>
@@ -184,7 +190,7 @@ const onCellValueChanged = useCallback((event) => {
       animateRows={true} // Optional - set to 'true' to have rows animate when sorted
       rowSelection='multiple' // Options - allows click selection of rows
       onCellValueChanged={onCellValueChanged}
-      onCellClicked={cellClickedListener(indexes, lastPrices, priceDates )} // Optional - registering for Grid Event
+      onCellClicked={cellClickedListener} // Optional - registering for Grid Event
      
       />
 </div>

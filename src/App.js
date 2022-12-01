@@ -15,6 +15,7 @@ import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Currency from './Currency';
+import Options from './Options';
 
 // Register the required feature modules with the Grid
 //ModuleRegistry.registerModules([ClientSideRowModelModule]);
@@ -146,6 +147,7 @@ return (
  <div>
   <Trade indexes={index} lastPrices={lastPrice} priceDates={priceDate}></Trade>
   <Currency indexes={currIndex} lastPrices={currLastPrice} priceDates={currPriceDate}></Currency>
+  <Options indexes={index} lastPrices={lastPrice} priceDates={priceDate}></Options>
   </div>
 )
     
