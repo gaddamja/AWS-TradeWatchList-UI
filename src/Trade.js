@@ -36,7 +36,9 @@ export default function Trade({indexes, lastPrices, priceDates}) {
   
   // Each Column Definition results in one Column.
  const [columnDefs, setColumnDefs] = useState([
-  {headerName: 'Stocks',
+  {headerName: 'Stocks',  cellClassRules: {
+    'header-class': params => params.headerName === 'Stocks',
+},
   children: [
   {headerName: 'Long Index',field: 'LongIndex', editable: true,filter: true},
   {headerName: 'Short Index', field: 'ShortIndex', editable: true,filter: true},
@@ -48,7 +50,7 @@ export default function Trade({indexes, lastPrices, priceDates}) {
   {headerName: 'Long Last Price', field: 'LongLastPrice'},
   {headerName: 'Short Last Price',field: 'ShortLastPrice'},
   {headerName: 'Spread (Last Price)', field: 'SpreadLastPrice'},
-  {headerName: '%Var. (Since Inception)', field: 'PercentVarSinceInception'},
+  {headerName: '%Var. (Since Inception)', field: 'PercentVarSinceInception',cellClassRules: cellClassRules},
   {headerName: 'Weeks on Watchlist', field: 'WeeksonWatchlist', editable: true},
   {headerName: 'Week 1', field: 'Week1',cellClassRules: cellClassRules},
   {headerName: 'Week 2', field: 'Week2',cellClassRules: cellClassRules},
@@ -135,7 +137,7 @@ const onCellValueChanged = useCallback((event) => {
         let spreadLast = parseFloat(parseFloat(rowNode.data.LongLastPrice)/parseFloat(rowNode.data.ShortLastPrice)).toFixed(2)
         rowNode.setDataValue('SpreadLastPrice',spreadLast);
 
-        let variance = parseFloat(((spreadLast - spreadEntry)/spreadEntry)*100).toFixed(2)+'%';
+        let variance = parseFloat(((spreadLast - spreadEntry)/spreadEntry)*100).toFixed(2);//+'%';
         rowNode.setDataValue('PercentVarSinceInception',variance);
 
       })
@@ -153,7 +155,7 @@ const onCellValueChanged = useCallback((event) => {
       let count = 0;
       while(count < rowNode.data.WeeksonWatchlist) {
         let spread = parseFloat(strlongEntryDescending[count].split(":")[1]/strshortEntryDescending[count].split(":")[1]).toFixed(2);
-        let variance = parseFloat(((spread - rowNode.data.SpreadEntryPrice)/rowNode.data.SpreadEntryPrice)*100).toFixed(2)+'%';
+        let variance = parseFloat(((spread - rowNode.data.SpreadEntryPrice)/rowNode.data.SpreadEntryPrice)*100).toFixed(2);//+'%';
         let field = "Week"+(count+1);
         rowNode.setDataValue(field,variance);
         count++;

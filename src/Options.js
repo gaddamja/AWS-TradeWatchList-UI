@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback} from 'react';
 import axios from 'axios';
 
-import './App.css';
+import './Stocks.css';
 
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
@@ -28,35 +28,38 @@ export default function Options({indexes, lastPrices, priceDates}) {
     };
 
 
-   
+    const cellClassRules = {
+      "cell-red": params => params.value < 0,
+      "cell-green": params => params.value >= 0
+    };
   
   // Each Column Definition results in one Column.
  const [columnDefs, setColumnDefs] = useState([
-  {headerName: 'Options',
+  {headerName: 'Options', cellClass: 'header-class',
   children: [
-  {headerName: 'Long Index',field: 'LongIndex', editable: true,filter: true},
-  {headerName: 'Short Index', field: 'ShortIndex', editable: true,filter: true},
-  {headerName: 'Entry Date', field: 'EntryDate',editable: true},
-  {headerName: 'Long Entry Price', field: 'LongEntryPrice'},
-  {headerName: 'Short Entry Price', field: 'ShortEntryPrice'},
-  {headerName: 'Spread (Entry Price)', field: 'SpreadEntryPrice'},
-  {headerName: 'Position Date', field: 'PositionDate', editable: true},
-  {headerName: 'Long Last Price', field: 'LongLastPrice'},
-  {headerName: 'Short Last Price',field: 'ShortLastPrice'},
-  {headerName: 'Spread (Last Price)', field: 'SpreadLastPrice'},
-  {headerName: '%Var. (Since Inception)', field: 'PercentVarSinceInception'},
-  {headerName: 'Weeks on Watchlist', field: 'WeeksonWatchlist', editable: true},
-  {headerName: 'Week 1', field: 'Week1'},
-  {headerName: 'Week 2', field: 'Week2'},
-  {headerName: 'Week 3', field: 'Week3'},
-  {headerName: 'Week 4', field: 'Week4'},
-  {headerName: 'Week 5', field: 'Week5'},
-  {headerName: 'Week 6', field: 'Week6'},
-  {headerName: 'Week 7', field: 'Week7'},
-  {headerName: 'Week 8', field: 'Week8'},
-  {headerName: 'Week 9', field: 'Week9'},
-  {headerName: 'Week 10', field: 'Week10'}
-  ]}
+    {headerName: 'Long Index',field: 'LongIndex', editable: true,filter: true},
+    {headerName: 'Short Index', field: 'ShortIndex', editable: true,filter: true},
+    {headerName: 'Entry Date', field: 'EntryDate',editable: true},
+    {headerName: 'Long Entry Price', field: 'LongEntryPrice'},
+    {headerName: 'Short Entry Price', field: 'ShortEntryPrice'},
+    {headerName: 'Spread (Entry Price)', field: 'SpreadEntryPrice'},
+    {headerName: 'Position Date', field: 'PositionDate', editable: true},
+    {headerName: 'Long Last Price', field: 'LongLastPrice'},
+    {headerName: 'Short Last Price',field: 'ShortLastPrice'},
+    {headerName: 'Spread (Last Price)', field: 'SpreadLastPrice'},
+    {headerName: '%Var. (Since Inception)', field: 'PercentVarSinceInception',cellClassRules: cellClassRules},
+    {headerName: 'Weeks on Watchlist', field: 'WeeksonWatchlist', editable: true},
+    {headerName: 'Week 1', field: 'Week1',cellClassRules: cellClassRules},
+    {headerName: 'Week 2', field: 'Week2',cellClassRules: cellClassRules},
+    {headerName: 'Week 3', field: 'Week3',cellClassRules: cellClassRules},
+    {headerName: 'Week 4', field: 'Week4',cellClassRules: cellClassRules},
+    {headerName: 'Week 5', field: 'Week5',cellClassRules: cellClassRules},
+    {headerName: 'Week 6', field: 'Week6',cellClassRules: cellClassRules},
+    {headerName: 'Week 7', field: 'Week7',cellClassRules: cellClassRules},
+    {headerName: 'Week 8', field: 'Week8',cellClassRules: cellClassRules},
+    {headerName: 'Week 9', field: 'Week9',cellClassRules: cellClassRules},
+    {headerName: 'Week 10', field: 'Week10',cellClassRules: cellClassRules}
+    ]}
 ]);
 
 const [rowData, setRowData] = useState([
@@ -131,7 +134,7 @@ const onCellValueChanged = useCallback((event) => {
         let spreadLast = parseFloat(parseFloat(rowNode.data.LongLastPrice)/parseFloat(rowNode.data.ShortLastPrice)).toFixed(2)
         rowNode.setDataValue('SpreadLastPrice',spreadLast);
 
-        let variance = parseFloat(((spreadLast - spreadEntry)/spreadEntry)*100).toFixed(2)+'%';
+        let variance = parseFloat(((spreadLast - spreadEntry)/spreadEntry)*100).toFixed(2);//+'%';
         rowNode.setDataValue('PercentVarSinceInception',variance);
 
       })
@@ -149,7 +152,7 @@ const onCellValueChanged = useCallback((event) => {
       let count = 0;
       while(count < rowNode.data.WeeksonWatchlist) {
         let spread = parseFloat(strlongEntryDescending[count].split(":")[1]/strshortEntryDescending[count].split(":")[1]).toFixed(2);
-        let variance = parseFloat(((spread - rowNode.data.SpreadEntryPrice)/rowNode.data.SpreadEntryPrice)*100).toFixed(2)+'%';
+        let variance = parseFloat(((spread - rowNode.data.SpreadEntryPrice)/rowNode.data.SpreadEntryPrice)*100).toFixed(2);//+'%';
         let field = "Week"+(count+1);
         rowNode.setDataValue(field,variance);
         count++;

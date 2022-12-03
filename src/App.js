@@ -4,6 +4,7 @@ import axios from 'axios';
 import Trade from './Trade';
 import './App.css';
 //import Stocks from './Stocks';
+import configData from "./configs.json";
 import { AgGridReact } from 'ag-grid-react'; // the AG Grid React Component
 
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
@@ -41,13 +42,17 @@ function App() {
   let currlastPrices = [];
   let currpriceDates = [];
   let currindexes = [];
+  let STOCKS_URL = process.env.REACT_APP_STOCKS_URL;
+  let CURRENCIES_URL = process.env.REACT_APP_CURRENCY_URL;
   //const [gridApi, setGridApi] =useState(null);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8083/tradeRequest/allStocks`
+         // `http://localhost:8083/tradeRequest/allStocks`
+         //STOCKS_URL
+         configData.REACT_APP_STOCKS_URL
         );
         console.log(response.data)
         setStocks(response.data);
@@ -80,7 +85,9 @@ function App() {
     const getCurrencyData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8083/tradeRequest/currencies`
+          //`http://localhost:8083/tradeRequest/currencies`
+          //CURRENCIES_URL
+          configData.REACT_APP_CURRENCY_URL
         );
         console.log("currencies :: ",response.data)
         setCurrencies(response.data);

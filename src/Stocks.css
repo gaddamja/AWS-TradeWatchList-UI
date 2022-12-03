@@ -64,6 +64,14 @@
   width: 230px;
 }
 
+.header-class {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  --ag-background-color: #8b032e;
+  color: #8b032e;
+}
+
 .stocks-percent {
   width: 100px;
 }
